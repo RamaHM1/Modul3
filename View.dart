@@ -1,6 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:modul3/model/message.dart';
+import 'package:modul3/messaging.dart';
 
 class MessagingWidget extends StatefulWidget {
   @override
@@ -18,6 +18,12 @@ class _MessagingWidgetState extends State<MessagingWidget> {
       onMessage: (Map<String, dynamic> message) async {
         print("onMessage: $message");
         final notification = message['notification'];
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text("$message"),
+          ),
+        );
         setState(() {
           messages.add(Message(
               title: notification['title'], body: notification['body']));
