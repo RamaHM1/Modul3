@@ -6,7 +6,7 @@ import 'package:meta/meta.dart';
 class Messaging {
   static final Client client = Client();
 
-  static const String serverKey = '';
+  static const String serverKey = ''; //Server Key Kalian 
 
   static Future<Response> sendToAll({
     @required String title,
