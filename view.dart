@@ -80,7 +80,7 @@ class _MessagingWidgetState extends State<MessagingWidget> {
           ),
           RaisedButton(
             onPressed: sendNotification,
-            child: Text('Send notification to all'),
+            child: Text('Kirim CO'),
           ),
         ]..addAll(messages.map(buildMessage).toList()),
       );
